@@ -1,6 +1,7 @@
 // constants.js
 
 export const NFT_CONTRACT_ADDRESS =
+  process.env.NEXT_PUBLIC_NFT_CONTRACT_ADDRESS ||
   "0x457d1A782557d4154F88169DABf62bDFB7382770";
 
 export const abi = [

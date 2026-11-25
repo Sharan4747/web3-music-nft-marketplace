@@ -1,3 +1,4 @@
+
 import Navbar from '../components/Navbar';
 import RegularButton from '../components/RegularButton';
 import StrokeButton from '../components/StrokeButton';
@@ -8,87 +9,328 @@ import HomePageExtras from '../components/HomePageExtras';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#020617] via-[#0a0f2c] to-[#010414] text-white overflow-hidden relative">
-      {/* === Navbar === */}
-      <Navbar />
+    <div className="neon-home min-h-screen text-white relative overflow-hidden">
 
-      {/* === Background glow + grid === */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.15),transparent_70%)] opacity-80"></div>
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05] bg-repeat"></div>
+      {/* ANIMATED BACKGROUND */}
+      <div className="neon-background" aria-hidden="true">
+        <div className="neon-orb neon-orb-one" />
+        <div className="neon-orb neon-orb-two" />
+        <div className="neon-orb neon-orb-three" />
 
-      {/* === Main content === */}
-      <main className="relative z-10 flex flex-col md:flex-row justify-between items-center px-8 md:px-16 py-10 md:py-20">
-        {/* Left Section */}
-        <div className="w-full md:w-3/5 space-y-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold gradient-text leading-tight">
-            Smart Music Infrastructure <br />
-            <span className="text-cyan-300">for a Decentralized Future</span>
-          </h1>
+        <div className="neon-grid" />
 
-          <p className="text-gray-300 md:text-lg max-w-xl">
-            Empowering <span className="text-cyan-400 font-medium">Creators</span> to mint, share, 
-            and earn from their music while giving <span className="text-violet-400 font-medium">Collectors</span> 
-            ownership of the next wave of sound.
-          </p>
+        <div className="particle particle-one" />
+        <div className="particle particle-two" />
+        <div className="particle particle-three" />
+        <div className="particle particle-four" />
+        <div className="particle particle-five" />
+        <div className="particle particle-six" />
+      </div>
 
-          <div className="flex space-x-4">
-            <Link href="/marketplace">
-              <RegularButton text={'Explore Marketplace'} />
-            </Link>
-            <Link href="/create">
-              <StrokeButton>Create NFT</StrokeButton>
-            </Link>
+      {/* NAVBAR */}
+      <div className="relative z-20">
+        <Navbar />
+      </div>
+
+      {/* HERO SECTION */}
+      <main className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-20">
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          {/* HERO CONTENT */}
+          <div className="hero-content">
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 text-emerald-200 text-xs tracking-widest uppercase mb-7">
+              <span className="live-dot" />
+              The Future of Music Ownership
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+
+              Music Has
+              <br />
+
+              <span className="neon-gradient-text">
+                No Limits.
+              </span>
+
+              <br />
+
+              <span className="text-white/90">
+                Own The Sound.
+              </span>
+
+            </h1>
+
+            <p className="mt-7 text-gray-300 text-base md:text-lg leading-8 max-w-xl">
+              Discover a new universe of music. Create, collect and trade
+              exclusive music NFTs while empowering artists through
+              decentralized ownership.
+            </p>
+
+            {/* HERO BUTTONS */}
+            <div className="flex flex-wrap gap-4 mt-9">
+
+              <Link href="/marketplace">
+                <div className="hero-primary-button">
+                  <RegularButton text="Explore Marketplace" />
+                </div>
+              </Link>
+
+              <Link href="/create">
+                <div className="hero-secondary-button">
+                  <StrokeButton>Create NFT</StrokeButton>
+                </div>
+              </Link>
+
+            </div>
+
+            {/* PLATFORM HIGHLIGHTS */}
+            <div className="flex flex-wrap gap-8 mt-14">
+
+              <div>
+                <p className="text-2xl font-bold text-white">
+                  Web3
+                </p>
+                <p className="text-xs text-[#8FA99F] mt-1 tracking-wider">
+                  DECENTRALIZED
+                </p>
+              </div>
+
+              <div className="w-px bg-white/10" />
+
+              <div>
+                <p className="text-2xl font-bold text-white">
+                  NFT
+                </p>
+                <p className="text-xs text-[#8FA99F] mt-1 tracking-wider">
+                  DIGITAL OWNERSHIP
+                </p>
+              </div>
+
+              <div className="w-px bg-white/10" />
+
+              <div>
+                <p className="text-2xl font-bold text-white">
+                  POL
+                </p>
+                <p className="text-xs text-[#8FA99F] mt-1 tracking-wider">
+                  POLYGON AMOY
+                </p>
+              </div>
+
+            </div>
           </div>
-        </div>
 
-        {/* Right Section (Image + Futuristic Glow) */}
-        <div className="relative w-full md:w-2/5 flex justify-center items-center mt-12 md:mt-0">
-          <div className="absolute w-[400px] h-[400px] bg-cyan-500 rounded-full blur-[180px] opacity-20"></div>
-          <Image
-            src={newHomeImage}
-            alt="Home illustration"
-            className="relative z-10 w-[85%] hover:scale-105 transition-transform duration-500"
-          />
+          {/* ANIMATED HERO VISUAL */}
+          <div className="hero-visual">
+
+            <div className="sound-ring sound-ring-one" />
+            <div className="sound-ring sound-ring-two" />
+            <div className="sound-ring sound-ring-three" />
+
+            <div className="music-orbit orbit-one" />
+            <div className="music-orbit orbit-two" />
+
+            <div className="hero-art-glow" />
+
+            <div className="hero-artwork">
+              <Image
+                src={newHomeImage}
+                alt="NEONVERSE music universe"
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div className="floating-label floating-label-top">
+              <span className="text-emerald-300">✦</span>
+              DIGITAL MUSIC
+            </div>
+
+            <div className="floating-label floating-label-bottom">
+              <span className="live-dot" />
+              THE SOUND UNIVERSE
+            </div>
+
+          </div>
         </div>
       </main>
 
-      {/* === Section: Two Pillars (like your ref image) === */}
-      <section className="relative z-10 grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-20 px-6 md:px-0">
-        {/* Pillar 1 */}
-        <div className="glass-panel p-6 md:p-8">
-          <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Pillar 1 — Living Music (Creators)</h2>
-          <p className="text-gray-400 mb-4">
-            Mint your sound NFTs using self-healing smart contracts that evolve over time. 
-            Enhance your reach and longevity of creative assets.
-          </p>
-          <ul className="text-sm text-gray-400 space-y-1 list-disc ml-5">
-            <li>Upload songs and album art</li>
-            <li>Set price and amount</li>
-            <li>Earn from every resale</li>
-          </ul>
-        </div>
+      {/* ANIMATED SOUND VISUALIZER */}
+      <section className="relative z-10 max-w-5xl mx-auto px-6 mb-24">
 
-        {/* Pillar 2 */}
-        <div className="glass-panel p-6 md:p-8">
-          <h2 className="text-2xl font-semibold text-violet-400 mb-3">Pillar 2 — AI-Driven Collecting (Buyers)</h2>
-          <p className="text-gray-400 mb-4">
-            AI-powered discovery helps collectors find rare music NFTs and track 
-            market trends in real-time.
-          </p>
-          <ul className="text-sm text-gray-400 space-y-1 list-disc ml-5">
-            <li>View verified creators and drops</li>
-            <li>Secure Polygon transactions</li>
-            <li>Predictive NFT recommendations</li>
-          </ul>
+        <div className="visualizer-panel">
+
+          <div className="flex items-center justify-between mb-5">
+
+            <div>
+              <p className="text-white font-semibold tracking-wide">
+                Feel The Frequency
+              </p>
+
+              <p className="text-[#8FA99F] text-xs mt-1">
+                A new dimension of music ownership
+              </p>
+            </div>
+
+            <span className="text-emerald-300 text-xs tracking-widest">
+              NEONVERSE
+            </span>
+
+          </div>
+
+          <div className="sound-visualizer" aria-hidden="true">
+            {Array.from({ length: 48 }).map((_, index) => (
+              <span
+                key={index}
+                style={{ '--bar-index': index }}
+              />
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* === Footer === */}
-      <footer className="relative z-10 text-center text-gray-500 text-sm pb-6">
-        © 2025 MNFTs — Powered by Polygon Amoy | Built for Sustainable Music
+      {/* PLATFORM PILLARS */}
+      <section className="relative z-10 max-w-6xl mx-auto px-6 pb-24">
+
+        <div className="text-center mb-12">
+
+          <p className="text-emerald-300 text-xs tracking-[0.35em] uppercase mb-4">
+            Explore The Ecosystem
+          </p>
+
+          <h2 className="text-3xl md:text-5xl font-bold">
+            One Universe.
+            <span className="neon-gradient-text">
+              {' '}Two Worlds.
+            </span>
+          </h2>
+
+          <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+            A platform connecting music creators and collectors through
+            blockchain-powered digital ownership.
+          </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-7">
+
+          {/* ARTIST CARD */}
+          <div className="neon-feature-card creator-card">
+
+            <div className="feature-icon">
+              ♫
+            </div>
+
+            <p className="text-emerald-300 text-xs tracking-widest uppercase mb-3">
+              For Artists
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4">
+              Create Your Legacy.
+            </h3>
+
+            <p className="text-gray-400 leading-7 mb-6">
+              Turn your music into digital assets. Upload your songs and
+              artwork, set your price and quantity, and share your work
+              with collectors.
+            </p>
+
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li>✦ Upload music and album artwork</li>
+              <li>✦ Mint music NFTs</li>
+              <li>✦ List your creations on the marketplace</li>
+            </ul>
+
+            <Link href="/create" className="feature-link">
+              Start Creating <span>↗</span>
+            </Link>
+
+          </div>
+
+          {/* COLLECTOR CARD */}
+          <div className="neon-feature-card collector-card">
+
+            <div className="feature-icon">
+              ◈
+            </div>
+
+            <p className="text-emerald-200 text-xs tracking-widest uppercase mb-3">
+              For Collectors
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4">
+              Own The Next Sound.
+            </h3>
+
+            <p className="text-gray-400 leading-7 mb-6">
+              Explore digital music collectibles, discover independent
+              artists and purchase NFTs through Polygon blockchain
+              transactions.
+            </p>
+
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li>✦ Discover music NFTs</li>
+              <li>✦ Collect digital music assets</li>
+              <li>✦ Trade through the marketplace</li>
+            </ul>
+
+            <Link href="/marketplace" className="feature-link">
+              Explore Collection <span>↗</span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CALL TO ACTION */}
+      <section className="relative z-10 max-w-5xl mx-auto px-6 pb-24">
+
+        <div className="neon-cta text-center">
+
+          <p className="text-emerald-300 text-xs tracking-[0.3em] uppercase mb-4">
+            Your Sound. Your Universe.
+          </p>
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-5">
+            Ready to Enter
+            <br />
+
+            <span className="neon-gradient-text">
+              NEONVERSE?
+            </span>
+          </h2>
+
+          <p className="text-gray-400 max-w-lg mx-auto mb-8">
+            Discover music without boundaries and experience the future
+            of digital music ownership.
+          </p>
+
+          <Link href="/marketplace">
+            <RegularButton text="Enter Marketplace" />
+          </Link>
+
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="relative z-10 border-t border-emerald-400/10 py-7 text-center">
+
+        <p className="text-[#8FA99F] text-xs tracking-wider">
+          © 2026 NEONVERSE · Powered by Polygon Amoy
+        </p>
+
+        <p className="text-[#71877D] text-xs mt-2">
+          Music without boundaries.
+        </p>
+
       </footer>
 
+      {/* EXISTING HOME PAGE EXTRAS */}
       <HomePageExtras />
+
     </div>
   );
 }

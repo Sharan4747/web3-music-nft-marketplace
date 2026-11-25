@@ -357,7 +357,7 @@ The project demonstrates how blockchain technology, smart contracts, decentraliz
 
 ## 12. Live Project
 
-**Website:** https://music-nfts-ruby.vercel.app/
+**Website:** web3-music-nft-marketplace.vercel.app
 
 **Blockchain:** Polygon Amoy Testnet
 
